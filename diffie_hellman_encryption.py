@@ -6,7 +6,6 @@ def diffie_hellman(alice_private, bob_private):
     """Try coding the Diffie-Hellman key exchange. 
     p and g are established already. 
     """
-    #------START--------# 
     
     alice_public = (g**alice_private)%p
     
@@ -20,7 +19,3 @@ def diffie_hellman(alice_private, bob_private):
     
     print(alice_final, bob_final)
 
-
-    #------END--------# 
-
-diffie_hellman(8, 16)
