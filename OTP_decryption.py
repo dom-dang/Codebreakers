@@ -1,13 +1,5 @@
 def find_OTP_key(plaintext1, ciphertext1, ciphertext2):
-    """You're an adversary Eve and you're listening to messages sent between Alice and Bob. 
-        You know Alice and Bob are encrypting their messages with a One Time Pad. 
-        While snooping, you find that Alice accidentally revealed the plaintext (in binary) to her message! 
-        Find out what the key that Alice and Bob are using, and find out what Alice and Bob are talking about. 
-        
-        Important Notes: 
-        Inputs will be in binary but the output should be in English text! 
-        The function binary_to_english is given to you so you can convert the messages to English.
-        Use the str_xor that I provided under help functions:) 
+    """ Breaking a one time pad when the plaintext and ciphertext of Alice is known and the ciphertext of Bob is known. Plaintexts and ciphertexts are in binary. 
         """
         
     OTP_key = str_xor(plaintext1, ciphertext1)
@@ -17,8 +9,8 @@ def find_OTP_key(plaintext1, ciphertext1, ciphertext2):
     
     print("Alice: ", binary_to_english(plaintext1))
     print("Bob: ", binary_to_english(plaintext2))
-        
-###----HELP FUNCTIONS!!! DON'T TOUCH :)----###
+
+    
 
 def str_xor(input1,input2):
     assert(len(input1) == len(input2))
