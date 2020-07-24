@@ -1,3 +1,6 @@
+# A fun group project where we made a fortune teller that takes input for a user's birthday
+
+
 def fortune_teller():
     user_input = input ("What month is your birthday?")
     
