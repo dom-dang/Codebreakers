@@ -1,15 +1,5 @@
-""" EXERCISE: You just hacked into a company's database and can only see the hash digest of the passwords. 
-    You know this company does not salt their hashes and you want to see if any of the passwords are from the list of common passwords. 
-    Write a code that will find out which hash digest relates to which password. 
-    Try to bruteforce the MD5 hashes that you found. 
-    Make sure your code output will result in something like the following: 
-    Password 1 is 
-    Password 2 is
-    Password 3 is 
-    ....
-    """
+#Attempt to break hash codes (without salts) with a known list of common passwrods by brute force.
 
-#What is the library that lets you use hashes?
 import hashlib 
 
 passwordhash1 = "5f4dcc3b5aa765d61d8327deb882cf99"
@@ -26,13 +16,11 @@ commonpass = ["password", "password123", "123456","12345678","1111111","qwerty",
 "secret","guitar","violin","piano","phoenix","morgan","aaaaaa","aaaaaaaaa","bbbbbbb","aoisdjfoia","asdfgjkl","zxcvnb",
 "scooter","peace","falcon","matrix","money","1273168724","abc789","whatever","gateway","chicken","duck","turkey"]
 
-#----START helper functions, do not touch------#
+
 def hash_value(plaintext_pass):
     return hashlib.md5(plaintext_pass.encode()).hexdigest()
-#----END helper functions, do not touch------#
 
 
-#-----START CODE----#
 def break_hash():
     for word in commonpass:
         tempWord = hash_value(word)
@@ -48,4 +36,3 @@ def break_hash():
             print ("Password 5 is " + word)
         if (tempWord == passwordhash6):
             print ("Password 6 is " + word)
-#-----END CODE----#
