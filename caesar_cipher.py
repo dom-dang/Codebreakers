@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 14 14:57:00 2020
 
 @author: Dominique
 """
